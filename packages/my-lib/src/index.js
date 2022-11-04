@@ -1,7 +1,3 @@
-'use strict';
-
-module.exports = myLib;
-
-function myLib() {
-    return "Hello from myLib";
+export function doTask() {
+  console.log(`do task`,);
 }

@@ -1,7 +1,6 @@
-'use strict';
+import { doTask } from '@leon/my-lib';
+import { hello } from './tool';
 
-module.exports = myApp;
-
-function myApp() {
-    return "Hello from myApp";
+window.onload = function () {
+  doTask();
 }
