@@ -1,41 +1,27 @@
 const path = require('path');
+const { ModuleFederationPlugin } = require('webpack').container;
 
 module.exports = (env) => {
   return {
-    mode: 'production',
+    mode: 'development',
     devtool: false,
-    entry: {
-      index: {
-        import: './src/index.js',
-      },
-    },
+    entry: './src/index',
     output: {
-      filename: '[name].js',
-      path: path.resolve(__dirname, './dist'),
-      clean: true,
-      library: 'umd',
-      libraryTarget: 'umd'
+      publicPath: 'auto',
     },
-    optimization: {
-      usedExports: true,
-      splitChunks: {
-        cacheGroups: {
-          venders: {
-            chunks: 'all',
-            test: /[\\/]node_modules[\\/]/,
-            name: 'vendors'
-          }
-        }
-      }
+    devServer: {
+      static: path.join(__dirname, 'dist'),
+      port: 9002,
     },
-    module: {
-      rules: [
-        {
-          test: /\.js$/,
-          exclude: [/(node_modules)/],
-          loader: 'babel-loader',
-        }
-      ]
-    }
+    plugins: [
+      new ModuleFederationPlugin({
+        name: 'lib2',
+        filename: 'remoteEntry.js',
+        library: { type: 'var', name: 'lib2' },
+        exposes: {
+          './Util': './src/util.js',
+        },
+      })
+    ],
   };
 };

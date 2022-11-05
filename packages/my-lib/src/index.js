@@ -1,3 +1,3 @@
-export function doTask() {
-  console.log(`do task`,);
-}
+import './util';
+
+console.log(`hello app2`,);

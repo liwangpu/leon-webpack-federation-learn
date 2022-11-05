@@ -8,6 +8,7 @@
   "main": "dist/index.js",
   "scripts": {
     "test": "echo app",
+    "start": "webpack-cli serve",
     "build": "webpack"
   },
   "directories": {
