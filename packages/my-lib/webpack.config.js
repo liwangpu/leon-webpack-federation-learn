@@ -15,9 +15,9 @@ module.exports = (env) => {
     },
     plugins: [
       new ModuleFederationPlugin({
-        name: 'lib2',
+        name: 'my-lib',
         filename: 'remoteEntry.js',
-        library: { type: 'var', name: 'lib2' },
+        library: { type: 'var', name: 'myLib' },
         exposes: {
           './Util': './src/util.js',
         },

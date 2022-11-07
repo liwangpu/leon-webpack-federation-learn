@@ -3,11 +3,19 @@
 
 // import L from 'lib2/Util';
 
-import('lib2/Util').then(m => {
-  // console.log(`module:`, m.default);
-  // m();
-  m.default();
-})
+// const Home=React.Lazy();
+
+
+// import * as Uilt from 'my-lib/Util';
+import('./dynamic');
+
+// import('my-lib/Util').then(m => {
+//   // console.log(`module:`, m.default);
+//   // m();
+//   m.default();
+// })
+
+// console.log(`Uilt:`,Uilt);
 
 window.onload = function () {
   // doTask();

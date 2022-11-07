@@ -30,7 +30,7 @@ module.exports = (env) => {
         name: 'app',
         // filename: 'remoteEntry.js',
         remotes: {
-          "lib2": "lib2@//localhost:9002/remoteEntry.js"
+          "my-lib": "myLib@//localhost:9002/remoteEntry.js"
         }
       }),
       new HtmlWebpackPlugin({

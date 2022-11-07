@@ -1,0 +1,17 @@
+{
+  "compilerOptions": {
+    "outDir": "./dist/",
+    "noImplicitAny": false,
+    "target": "es5",
+    "module": "commonjs",
+    "moduleResolution": "node",
+    "sourceMap": true,
+    "declarationMap": false,
+    "inlineSources": false,
+    "declaration": true,
+    "stripInternal": true
+  },
+  "include": [
+    "src/**/*.ts"
+  ]
+}
