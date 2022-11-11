@@ -31,7 +31,8 @@ module.exports = (env) => {
         // filename: 'remoteEntry.js',
         remotes: {
           "my-lib": "myLib@//localhost:9002/remoteEntry.js"
-        }
+        },
+        shared: { 'lodash': { singleton: true } }
       }),
       new HtmlWebpackPlugin({
         title: 'MyApp',

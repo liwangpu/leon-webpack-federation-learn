@@ -4,7 +4,8 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:lib": "lerna run --scope @leon/my-lib build"
+    "build:lib": "lerna run --scope my-lib build",
+    "build:app": "lerna run --scope my-app build"
   },
   "repository": {
     "type": "git",

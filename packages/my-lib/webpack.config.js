@@ -21,6 +21,7 @@ module.exports = (env) => {
         exposes: {
           './Util': './src/util.js',
         },
+        shared: { 'lodash': { singleton: true } }
       })
     ],
   };
