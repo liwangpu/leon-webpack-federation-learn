@@ -1,6 +1,7 @@
 const path = require('path');
 const webpack = require('webpack');
 const HtmlWebpackPlugin = require('html-webpack-plugin');
+const { ModuleFederationPlugin } = require('webpack').container;
 
 module.exports = (env) => {
   return {
@@ -8,6 +9,11 @@ module.exports = (env) => {
     devtool: false,
     entry: {
       index: './src/app.tsx',
+    },
+    performance: {
+      hints: false,
+      maxEntrypointSize: 512000,
+      maxAssetSize: 512000
     },
     output: {
       path: path.resolve(__dirname, 'dist'),
@@ -67,6 +73,27 @@ module.exports = (env) => {
     },
     plugins: [
       new webpack.HotModuleReplacementPlugin(),
+      new ModuleFederationPlugin({
+        name: 'react-app',
+        // filename: 'remoteEntry.js',
+        remotes: {
+          "my-react-lib": "myReactLib@//localhost:9102/remoteEntry.js"
+        },
+        // shared: {
+        //   react: {
+        //     eager:true,
+        //     singleton: true,
+        //     strictVersion: true,
+        //     requiredVersion: '18.2.0'
+        //   },
+        //   'react-dom': {
+        //     eager:true,
+        //     singleton: true,
+        //     strictVersion: true,
+        //     requiredVersion: '18.2.0'
+        //   }
+        // },
+      }),
       new HtmlWebpackPlugin({
         title: '代码分隔',
         template: './public/index.html'

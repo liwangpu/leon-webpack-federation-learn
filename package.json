@@ -4,9 +4,12 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "build:lib": "lerna run --scope my-lib build",
-    "build:app": "lerna run --scope my-app build",
-    "build:react-app": "lerna run --scope my-react-app"
+    "start:react-app":"lerna run start --scope my-react-app",
+    "start:react-lib":"lerna run start --scope my-react-lib",
+    "build:lib": "lerna run build --scope my-lib",
+    "build:app": "lerna run build --scope my-app",
+    "build:react-app": "lerna run build --scope my-react-app",
+    "build:react-lib": "lerna run build --scope my-react-lib"
   },
   "repository": {
     "type": "git",
