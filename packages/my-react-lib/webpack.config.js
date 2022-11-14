@@ -15,7 +15,7 @@ module.exports = (env) => {
       publicPath: 'auto'
     },
     resolve: {
-      extensions: ['.tsx', '.ts', '.js'],
+      extensions: ['.tsx', '.ts', '.js','.css','.less'],
     },
     devServer: {
       static: path.join(__dirname, 'dist'),
@@ -57,14 +57,14 @@ module.exports = (env) => {
           react: {
             eager: true,
             singleton: true,
-            strictVersion: true,
-            requiredVersion: '18.2.0'
+            strictVersion: false,
+            // requiredVersion: '18.2.0'
           },
           'react-dom': {
             eager: true,
             singleton: true,
-            strictVersion: true,
-            requiredVersion: '18.2.0'
+            strictVersion: false,
+            // requiredVersion: '18.2.0'
           }
         },
       }),

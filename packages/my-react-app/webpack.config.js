@@ -5,7 +5,7 @@ const { ModuleFederationPlugin } = require('webpack').container;
 
 module.exports = (env) => {
   return {
-    mode: 'development',
+    mode: 'production',
     devtool: false,
     entry: {
       index: './src/app.tsx',
