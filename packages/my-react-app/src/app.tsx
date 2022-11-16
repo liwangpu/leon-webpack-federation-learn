@@ -3,6 +3,9 @@ import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom"
 import React, { Suspense } from 'react';
 import './app.less';
 
+(window as any).react = require('react');
+(window as any).reactDom = require('react-dom');
+
 const Home = React.lazy(() => import(/* webpackPrefetch:true */'./pages/Home'));
 // const PageManager = React.lazy(() => import(/* webpackPrefetch:true */'./app/pages/PageManager'));
 // const PageEditor = React.lazy(() => import(/* webpackPrefetch:true */'./app/pages/PageEditor'));

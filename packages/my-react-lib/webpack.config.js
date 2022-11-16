@@ -15,11 +15,11 @@ module.exports = (env) => {
       publicPath: 'auto'
     },
     resolve: {
-      extensions: ['.tsx', '.ts', '.js','.css','.less'],
+      extensions: ['.tsx', '.ts', '.js', '.css', '.less'],
     },
     devServer: {
       static: path.join(__dirname, 'dist'),
-      port: 9102,
+      port: 8002,
     },
     module: {
       rules: [
@@ -45,6 +45,13 @@ module.exports = (env) => {
         }
       ]
     },
+    externals: {
+      "react": "react",
+      "react-dom": "reactDom",
+      // "lodash": 'lodash',
+      // "antd": 'antd',
+      // 'mobx-react-lite':'mobxReactLite',
+    },
     plugins: [
       new ModuleFederationPlugin({
         name: 'my-react-lib',
@@ -53,20 +60,20 @@ module.exports = (env) => {
         exposes: {
           './Button': './src/Button',
         },
-        shared: {
-          react: {
-            eager: true,
-            singleton: true,
-            strictVersion: false,
-            // requiredVersion: '18.2.0'
-          },
-          'react-dom': {
-            eager: true,
-            singleton: true,
-            strictVersion: false,
-            // requiredVersion: '18.2.0'
-          }
-        },
+        // shared: {
+        //   react: {
+        //     eager: true,
+        //     singleton: true,
+        //     strictVersion: false,
+        //     // requiredVersion: '18.2.0'
+        //   },
+        //   'react-dom': {
+        //     eager: true,
+        //     singleton: true,
+        //     strictVersion: false,
+        //     // requiredVersion: '18.2.0'
+        //   }
+        // },
       }),
     ]
   };

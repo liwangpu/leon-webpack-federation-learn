@@ -4,8 +4,11 @@
   "description": "",
   "main": "index.js",
   "scripts": {
-    "start:react-app":"lerna run start --scope my-react-app",
-    "start:react-lib":"lerna run start --scope my-react-lib",
+    "start:app": "lerna run start --scope my-app",
+    "start:app-live-server": "lerna run start:live-server --scope my-app",
+    "start:lib": "lerna run start --scope my-lib",
+    "start:react-app": "lerna run start --scope my-react-app",
+    "start:react-lib": "lerna run start --scope my-react-lib",
     "build:lib": "lerna run build --scope my-lib",
     "build:app": "lerna run build --scope my-app",
     "build:react-app": "lerna run build --scope my-react-app",

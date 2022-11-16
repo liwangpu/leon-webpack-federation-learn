@@ -1,23 +1,18 @@
-// import { doTask } from '@leon/my-lib';
-// import { hello } from './tool';
+// import('./dynamic');
 
-// import L from 'lib2/Util';
+// import('primary-component-package/componentPackage').then(m => {
+//   console.log(`m:`, m);
+// });
 
-// const Home=React.Lazy();
-
-
-// import * as Uilt from 'my-lib/Util';
-import('./dynamic');
+// import('primary-component-package/button').then(m => {
+//   console.log(`button:`, m);
+// });
 
 // import('my-lib/Util').then(m => {
-//   // console.log(`module:`, m.default);
-//   // m();
-//   m.default();
-// })
+//   console.log(`util:`, m);
+// });
 
-// console.log(`Uilt:`,Uilt);
-
-window.onload = function () {
-  // doTask();
-  // console.log(`lib2:`, L);
-}
+// window.onload = function () {
+//   // doTask();
+//   // console.log(`lib2:`, L);
+// }

@@ -1,1 +1,2 @@
-import './bootstrap';
+// import './bootstrap';
+export const t = 1;

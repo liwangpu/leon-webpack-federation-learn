@@ -9,6 +9,7 @@
   "scripts": {
     "test": "echo app",
     "start": "webpack serve",
+    "start:live-server":"node server.js",
     "build": "webpack"
   },
   "directories": {
@@ -31,7 +32,8 @@
     "html-webpack-plugin": "^5.5.0",
     "webpack": "^5.74.0",
     "webpack-cli": "^4.10.0",
-    "webpack-dev-server": "^4.11.1"
+    "webpack-dev-server": "^4.11.1",
+    "live-server": "^1.2.2"
   },
   "dependencies": {
     "lodash": "^4.17.21"

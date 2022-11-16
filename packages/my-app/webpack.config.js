@@ -23,14 +23,16 @@ module.exports = (env) => {
         directory: path.join(__dirname, 'dist'),
       },
       // compress: true,
-      port: 9001,
+      port: 8101,
     },
     plugins: [
       new ModuleFederationPlugin({
         name: 'app',
         // filename: 'remoteEntry.js',
         remotes: {
-          "my-lib": "myLib@//localhost:9002/remoteEntry.js"
+          "my-lib": "myLib@//localhost:8001/remoteEntry.js",
+          // "primary-component-package/componentPackage": "tiangongPrimaryComponentPackage@//localhost:9001/remoteEntry.js",
+          // "primary-component-package/button": "tiangongPrimaryComponentPackage@//127.0.0.1:5501/remoteEntry.js"
         },
         shared: { 'lodash': { singleton: true } }
       }),

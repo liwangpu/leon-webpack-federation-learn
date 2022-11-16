@@ -28,7 +28,7 @@ module.exports = (env) => {
         directory: path.join(__dirname, 'dist'),
       },
       historyApiFallback: true,
-      port: 9101,
+      port: 8102,
       hot: true
     },
     optimization: {
@@ -77,7 +77,7 @@ module.exports = (env) => {
         name: 'react-app',
         // filename: 'remoteEntry.js',
         remotes: {
-          "my-react-lib": "myReactLib@//localhost:9102/remoteEntry.js"
+          "my-react-lib": "myReactLib@//localhost:8002/remoteEntry.js"
         },
         // shared: {
         //   react: {

@@ -11,7 +11,7 @@ module.exports = (env) => {
     },
     devServer: {
       static: path.join(__dirname, 'dist'),
-      port: 9002,
+      port: 8001,
     },
     plugins: [
       new ModuleFederationPlugin({
