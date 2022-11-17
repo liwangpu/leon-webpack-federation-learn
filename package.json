@@ -12,7 +12,11 @@
     "build:lib": "lerna run build --scope my-lib",
     "build:app": "lerna run build --scope my-app",
     "build:react-app": "lerna run build --scope my-react-app",
-    "build:react-lib": "lerna run build --scope my-react-lib"
+    "build:react-lib": "lerna run build --scope my-react-lib",
+    "start:simple": "lerna run start --scope={my-app,my-lib}",
+    "build:simple": "lerna run build --scope={my-app,my-lib}",
+    "start:react": "lerna run start --scope={my-react-app,my-react-lib}",
+    "build:react": "lerna run build --scope={my-react-app,my-react-lib}"
   },
   "repository": {
     "type": "git",

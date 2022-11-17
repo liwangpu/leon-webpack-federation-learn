@@ -1,4 +1,4 @@
 // import('./util');
-export const t1 = 1;
+export const t1 = 2;
 
-console.log(`hello app2`,);
+console.log(`hello app2 1`,);

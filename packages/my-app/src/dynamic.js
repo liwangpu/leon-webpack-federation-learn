@@ -1,7 +1,7 @@
-import { isEqual } from 'lodash';
+// import { isEqual } from 'lodash';
 import Uilt from 'my-lib/Util';
 
-console.log(`Uilt:`, isEqual(1, 2));
+// console.log(`Uilt:`, isEqual(1, 2));
 
 Uilt();
 
